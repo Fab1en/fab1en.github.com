@@ -11,6 +11,17 @@
 	font-style: normal;
 }
 
+@font-face {
+    font-family: 'PaloAltoHeavy';
+    src: url('../fonts/Palo_Alto_Regular-webfont.eot');
+    src: url('../fonts/Palo_Alto_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Palo_Alto_Regular-webfont.woff') format('woff'),
+         url('../fonts/Palo_Alto_Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Palo_Alto_Regular-webfont.svg#PaloAltoHeavy') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -83,15 +94,23 @@
 .vcard {
     background: #008DB1;
     position: relative;
+    font-family: 'PaloAltoHeavy', Arial, sans-serif;
 }
 
-.vcard .fn {
+.vcard .n {
     padding: 1em 0 0 0;
     margin: 0 auto;
     width: 60%;
+    font-size: 35px;
 }
 
-.vcard .fn .url {
+.vcard .family-name{
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.vcard .n .url {
     color: white;
     text-decoration: none;
 }
@@ -133,7 +152,7 @@
 .vcard .contact {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1px;
     height: 60%;
     margin: 20% 0;
 }
