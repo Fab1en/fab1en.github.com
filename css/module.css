@@ -1,5 +1,16 @@
 /*! module.css */
 
+@font-face {
+	font-family: 'icon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -63,4 +74,138 @@
 
 .clearfix {
     *zoom: 1;
+}
+
+/* ==========================================================================
+   vCard
+   ========================================================================== */
+   
+.vcard {
+    background: #008DB1;
+    position: relative;
+}
+
+.vcard .fn {
+    padding: 1em 0 0 0;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.vcard .fn .url {
+    color: white;
+    text-decoration: none;
+}
+
+.vcard .title {
+    padding: 0 0 1em;
+    margin: 0 auto;
+    width: 60%;
+    text-align: right;
+}
+
+.vcard .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+}
+
+.vcard .email {
+    position: absolute;
+    top: 5%;
+    left: 13%;
+    display: block;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+}
+
+.vcard .contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60%;
+    margin: 20% 0;
+}
+
+.vcard .contact > li {
+    display: inline-block;
+    list-style: none;
+}
+
+.vcard .contact .url {
+	color: black;
+	text-decoration: none;
+	font-size: 4em;
+	padding: 0.1em;
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.vcard .contact .url:hover {
+    color: white;
+}
+
+/* ==========================================================================
+   icons
+   ========================================================================== */
+
+.icon-wordpress:before, .icon-linkedin:before, .icon-tux:before, .icon-skype:before, .icon-stackoverflow:before, .icon-html5:before, .icon-html5-2:before, .icon-chrome:before, .icon-css3:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-github:before, .icon-github-2:before, .icon-github-3:before {
+	font-family: 'icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-wordpress:before {
+	content: "\57";
+}
+.icon-linkedin:before {
+	content: "\69";
+}
+.icon-tux:before {
+	content: "\6c";
+}
+.icon-skype:before {
+	content: "\73";
+}
+.icon-stackoverflow:before {
+	content: "\53";
+}
+.icon-html5:before {
+	content: "\48";
+}
+.icon-html5-2:before {
+	content: "\68";
+}
+.icon-chrome:before {
+	content: "\63";
+}
+.icon-css3:before {
+	content: "\66";
+}
+.icon-firefox:before {
+	content: "\46";
+}
+.icon-IE:before {
+	content: "\65";
+}
+.icon-opera:before {
+	content: "\6f";
+}
+.icon-safari:before {
+	content: "\77";
+}
+.icon-github:before {
+	content: "\67";
+}
+.icon-github-2:before {
+	content: "\47";
+}
+.icon-github-3:before {
+	content: "\74";
 }
