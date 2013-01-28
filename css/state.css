@@ -50,3 +50,42 @@
 .invisible {
     visibility: hidden;
 }
+
+/* ==========================================================================
+   vCard
+   ========================================================================== */
+
+.is-vcard-reduced{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.is-vcard-reduced .contact .url{
+    font-size: 2em;
+}
+
+.is-vcard-reduced .n{
+    padding: 0.1em 0 0 0;
+}
+
+.is-vcard-reduced .given-name{
+    font-size: 30px;
+}
+
+.is-vcard-reduced .family-name{
+    display: inline;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.is-vcard-reduced .title{
+    position: absolute;
+    top: 0;
+    right: 20%;
+    padding: 0.5em 0 0;
+}
+
+
