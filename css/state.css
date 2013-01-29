@@ -93,4 +93,28 @@
     padding: 0.5em 0 0;
 }
 
+/* ==========================================================================
+   Carousel
+   ========================================================================== */
+
+.navigation > a:hover{
+    opacity: 1;
+}
+
+.csel-item > h3:hover + p, .csel-item > p:hover{
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.csel-item > h3:hover {
+    opacity: 0.1;
+    -webkit-transform: skewX(180deg) rotateX(180deg)
+    -moz-transform: skewX(180deg) rotateX(180deg)
+    -o-transform: skewX(180deg) rotateX(180deg)
+    transform: skewX(180deg) rotateX(180deg)
+}
 

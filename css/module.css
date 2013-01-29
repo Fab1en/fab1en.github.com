@@ -199,15 +199,132 @@
 	transition-timing-function: ease-out;
 }
 
-.vcard .contact .url:hover {
-    color: white;
+/* ==========================================================================
+   Carousel
+   ========================================================================== */
+   
+.carousel{
+    position: relative;
+}
+
+.csel-mask{
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 600px;
+}
+
+.csel-stage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.csel-item{
+    float: left;
+    width: 960px;
+}
+
+.csel-item > p{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 960px;
+    opacity: 0.1;
+    margin: 0;
+    padding: 1em 0;
+    
+    -webkit-transform: skewX(-180deg) rotateX(-180deg);
+    -moz-transform: skewX(-180deg) rotateX(-180deg);
+    -o-transform: skewX(-180deg) rotateX(-180deg);
+    transform: skewX(-180deg) rotateX(-180deg);
+    
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.csel-item > h3{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5em 0;
+    
+    text-align: center;
+    font: 40px/30px 'PaloAltoHeavy', Arial, sans-serif;
+    color: #008DB1;
+    text-shadow: #97B6CA -1px 1px 0px, #1C2D37 2px -1px 1px;
+    
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 1s;
+    -o-transition-property: all;
+    -o-transition-duration: 1s;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.csel-item > h3 > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.csel-item > p > a{
+    color: #008DB1;
+    font-weight: bold;
+}
+
+.navigation > a{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    color: #003b49;
+    text-decoration: none;
+    font-size: 65px;
+    opacity: 0.5;
+    
+    -webkit-transition-property: all;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-property: all;
+	-moz-transition-duration: 400ms;
+	-moz-transition-timing-function: ease-out;
+	-o-transition-property: all;
+	-o-transition-duration: 400ms;
+	-o-transition-timing-function: ease-out;
+	transition-property: all;
+	transition-duration: 400ms;
+	transition-timing-function: ease-out;
+}
+
+.navigation > a:before{
+    position: relative;
+    top: 50%;
+}
+
+.navigation .next{
+    right: 2%;
+}
+
+.navigation .prev{
+    left: 2%;
 }
 
 /* ==========================================================================
    icons
    ========================================================================== */
 
-.icon-wordpress:before, .icon-linkedin:before, .icon-tux:before, .icon-skype:before, .icon-stackoverflow:before, .icon-html5:before, .icon-html5-2:before, .icon-chrome:before, .icon-css3:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-github:before, .icon-github-2:before, .icon-github-3:before, .icon-mail:before, .icon-mail-2:before {
+.icon-wordpress:before, .icon-linkedin:before, .icon-tux:before, .icon-skype:before, .icon-stackoverflow:before, .icon-html5:before, .icon-html5-2:before, .icon-chrome:before, .icon-css3:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-github:before, .icon-github-2:before, .icon-github-3:before, .icon-mail:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-arrow-left-alt1:before, .icon-arrow-right-alt1:before, .icon-first:before, .icon-last:before {
 	font-family: 'icon';
 	speak: none;
 	font-style: normal;
@@ -266,6 +383,21 @@
 .icon-mail:before {
 	content: "\6d";
 }
-.icon-mail-2:before {
-	content: "\4d";
+.icon-arrow-left:before {
+	content: "\3c";
+}
+.icon-arrow-right:before {
+	content: "\3e";
+}
+.icon-arrow-left-alt1:before {
+	content: "\5c";
+}
+.icon-arrow-right-alt1:before {
+	content: "\2f";
+}
+.icon-first:before {
+	content: "\2d";
+}
+.icon-last:before {
+	content: "\2b";
 }
