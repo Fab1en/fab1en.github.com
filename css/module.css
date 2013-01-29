@@ -167,10 +167,10 @@
 
 .vcard .contact {
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 1px;
     height: 60%;
-    margin: 20% 0;
+    margin: 0;
 }
 
 .vcard .contact > li {
