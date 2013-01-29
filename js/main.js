@@ -10,7 +10,7 @@ jQuery(function($){
     }
     
     function setupHeader(){
-        if($(window).scrollTop() == 0) $('.vcard').removeClass('is-vcard-reduced');
+        if($(window).scrollTop() <= 100) $('.vcard').removeClass('is-vcard-reduced');
         else $('.vcard').addClass('is-vcard-reduced');
     }
     

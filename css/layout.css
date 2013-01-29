@@ -1,1 +1,10 @@
 /*! layout.css */
+
+#header{
+    height: 190px;
+}
+
+#footer{
+    height: 40px;
+    background: url(../img/texture.png) #008DB1;
+}

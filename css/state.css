@@ -55,6 +55,11 @@
    vCard
    ========================================================================== */
 
+.vcard .contact .url:hover {
+    opacity: 1;
+    text-shadow: rgba(0, 233, 255, 1) 0px 0px 50px;
+}
+
 .is-vcard-reduced{
     position: fixed;
     top: 0;
