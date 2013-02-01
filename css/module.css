@@ -324,7 +324,7 @@
    icons
    ========================================================================== */
 
-.icon-wordpress:before, .icon-linkedin:before, .icon-tux:before, .icon-skype:before, .icon-stackoverflow:before, .icon-html5:before, .icon-html5-2:before, .icon-chrome:before, .icon-css3:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-github:before, .icon-github-2:before, .icon-github-3:before, .icon-mail:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-arrow-left-alt1:before, .icon-arrow-right-alt1:before, .icon-first:before, .icon-last:before {
+.icon-wordpress:before, .icon-linkedin:before, .icon-tux:before, .icon-skype:before, .icon-stackoverflow:before, .icon-html5:before, .icon-html5-2:before, .icon-chrome:before, .icon-css3:before, .icon-firefox:before, .icon-IE:before, .icon-opera:before, .icon-safari:before, .icon-github:before, .icon-github-2:before, .icon-github-3:before, .icon-mail:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-arrow-left-alt1:before, .icon-arrow-right-alt1:before, .icon-first:before, .icon-last:before, .icon-viadeo:before {
 	font-family: 'icon';
 	speak: none;
 	font-style: normal;
@@ -401,3 +401,7 @@
 .icon-last:before {
 	content: "\2b";
 }
+.icon-viadeo:before {
+	content: "\76";
+}
+
