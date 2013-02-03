@@ -112,9 +112,9 @@
 
 .csel-item > h3:hover {
     opacity: 0.1;
-    -webkit-transform: skewX(180deg) rotateX(180deg)
-    -moz-transform: skewX(180deg) rotateX(180deg)
-    -o-transform: skewX(180deg) rotateX(180deg)
-    transform: skewX(180deg) rotateX(180deg)
+    -webkit-transform: skewX(180deg) rotateX(180deg);
+    -moz-transform: skewX(180deg) rotateX(180deg);
+    -o-transform: skewX(180deg) rotateX(180deg);
+    transform: skewX(180deg) rotateX(180deg);
 }
 
