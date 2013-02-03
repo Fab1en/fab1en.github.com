@@ -25,6 +25,18 @@ jQuery(function($){
         var index      = 0;
         var direction  = 'next';
         
+        var getNext = function(index){
+            if(index >= elemsNb-viewItems) return 0;
+            if(index + scrollItems > elemsNb-viewItems) return elemsNb-viewItems;
+            return index + scrollItems;
+        };
+        
+        var getPrev = function(index){
+            if(index <= 0) return elemsNb-viewItems;
+            if(index - scrollItems < 0) return 0;
+            return index - scrollItems;
+        }
+        
         if( elemsNb > viewItems ) {
             
             $elems.each(function() {
@@ -32,24 +44,32 @@ jQuery(function($){
             });
             
             $stage.width( elemsWidth );
+            $elems.first().attr('id');
             $carrousel
-                .prepend('<div class="navigation"><a href="#" class="prev icon-arrow-left" title="Afficher l\'élément précédent"></a></div>')
-                .append('<div class="navigation"><a href="#" class="next icon-arrow-right" title="Afficher l\'élément suivant"></a></div>');
+                .prepend('<div class="navigation"><a href="#'+$elems.last().attr('id')+'" class="prev icon-arrow-left" title="Afficher l\'élément précédent"></a></div>')
+                .append('<div class="navigation"><a href="#'+$elems.eq(1).attr('id')+'" class="next icon-arrow-right" title="Afficher l\'élément suivant"></a></div>');
                 
             $carrousel.find('.navigation').on('click', 'a', function(e) {
                 e.preventDefault();
                 if( transition == false ) {
                     transition = true;
+                    var newHash = $(this).attr('href');
                     if( $(this).hasClass('prev') ) {
-                        index <= 0 ? index = elemsNb-viewItems : index-=scrollItems;
-                        if(index < 0) index = 0;
+                        index = getPrev(index);
                     } else if( $(this).hasClass('next') ) {
-                        index >= elemsNb-viewItems ? index = 0 : index+=scrollItems;
-                        if(index > elemsNb-viewItems) index = elemsNb-viewItems;
+                        index = getNext(index);
                     }
-                    $stage.animate({ left: - ( elemsWidth / elemsNb ) * index }, 1000, function() { transition = false; });
+                    
+                    $stage.animate({ left: - ( elemsWidth / elemsNb ) * index }, 1000, function() { 
+                        transition = false; 
+                        window.location.hash = newHash;
+                        $carrousel.find('.prev').attr('href', '#'+$elems.eq(getPrev(index)).attr('id'));
+                        $carrousel.find('.next').attr('href', '#'+$elems.eq(getNext(index)).attr('id'));
+                    });
                 }
             });
+            
+            
 
         }
 
